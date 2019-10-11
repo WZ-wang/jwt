@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <input type="text" v-model="student.name">
+        </div>
+        <div>
+            {{student.name}}
+        </div>
+        <div>
+            {{student.age}}
+        </div>
+        {{getName}}
+        <ul>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+        </ul>
+    </div>
+    <!-- <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script> -->
+   <script src="./vuemvvm.js"></script>
+   <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                student:{
+                    name:"wwww",
+                    age:55
+                }
+            },
+            computed:{
+                getName(){
+                    return this.student.name
+                }
+            }
+        })
+    
+    </script>
+</body>
+</html>
