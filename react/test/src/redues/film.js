@@ -1,4 +1,4 @@
-export default function film(state=[],action){
+export default function film(state=0,action){
     switch (action.type) {
         case "GETFILMLIST":
             return state 

@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 
-class Add extends Component {
+class Wrapper extends Component {
     render() {
         return (
             <div>
-                <button>+</button>
             </div>
         );
     }
 }
 
-export default Add;
+export default Wrapper;

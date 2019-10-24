@@ -14,9 +14,8 @@ class Films extends Component {
     }
 }
 function setCounterState(state){
-    console.log(state.filmList)
     return {
-        filmList:state.filmList
+        filmList:state.counter
     }
 }
 function setCounterMethods(dipatch){
