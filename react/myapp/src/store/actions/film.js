@@ -1,8 +1,9 @@
 import axios from "axios"
 import * as types from "../actions-types"
-export function getList(){
+export function getList(payload){
     return {
-        type:types.GETLIST
+        type:types.GETLIST,
+        payload
     }
 }
 
