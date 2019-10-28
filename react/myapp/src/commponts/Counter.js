@@ -6,7 +6,9 @@ import {connect} from "react-redux"
 import Time from "./Time"
 import Film from "./Film"
 import Wrapper from "./Wrapper"
-
+import Ref from "./Ref"
+import LessRender from "./LessRender"
+import Hook from "./Hook"
 
 class Counter extends Component {
     render() {
@@ -23,6 +25,13 @@ class Counter extends Component {
                 <Film></Film>
                 <Link to="/wrapper">Wrapper</Link>
                 <Route path="/wrapper" exact component={Wrapper}></Route>
+                <br/>
+                <h1>Ref</h1>
+                <Ref></Ref>
+                <h1>避免重复渲染</h1>
+                <LessRender></LessRender>
+                <h1>Hook</h1>
+                <Hook></Hook>
             </div>
         );
     }
