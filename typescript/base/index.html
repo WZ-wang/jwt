@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = ()=>{
+            // 750 是你当前设计图的宽度
+            document.documentElement.style.fontSize = document.documentElement.offsetWidth/750*100 + "px"
+        }
+    </script>
+    <style>
+        html{
+            font-size: 100px;
+        }
+        .box{
+            width: 2rem;
+            height: 2rem;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
