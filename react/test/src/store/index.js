@@ -2,9 +2,18 @@ import {createStore,applyMiddleware,compose} from "redux"
 import {routerMiddleware} from "connected-react-router"
 import {createBrowserHistory} from "history"
 import reducers from "./reducers"
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
 
 export let history = createBrowserHistory()
  
+const persisitConfig = {
+  key:"root",
+  storage
+}
+
+
+
 
 
 export default function configureStore(preloadedState){
@@ -12,13 +21,15 @@ export default function configureStore(preloadedState){
     // const store = applyMiddleware(
     //     routerMiddleware(history))(createStore)
     //     (reducers(history),preloadedState);
+    const persisitedReducer = persistReducer(persisitConfig,reducers(history))
     const store = createStore(
-        reducers(history), 
+      persisitedReducer, 
         preloadedState,
         compose(
           applyMiddleware(
             routerMiddleware(history), 
           ),
         ))
-    return store
+    let persistor = persistStore(store)
+    return {store,persistor}
 }
