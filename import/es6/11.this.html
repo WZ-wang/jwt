@@ -1,0 +1,54 @@
+<script>
+
+// let a = 1110;
+// let obj = {
+//     a:33,
+//     f(){
+//         setTimeout(function() {
+//             console.log(this.a)  //undefined
+//         }, 0);
+//     }
+// }
+// obj.f()
+
+
+//var会挂到window上，let不会
+
+
+// var a = 1110;
+// let obj = {
+//     a:33,
+//     f(){
+//         setTimeout(function() {
+//             console.log(this.a)  //1110
+//         }, 0);
+//     }
+// }
+// obj.f()
+
+// var a = 1110;
+// let obj = {
+//     a:33,
+//     f(){
+//         setTimeout(() =>{
+//             console.log(this.a)  //33
+//         }, 0);
+//     }
+// }
+// obj.f()
+
+
+// var a = 1110;
+// let obj = {
+//     a:33,
+//     f:()=>{
+//         setTimeout(() =>{
+//             console.log(this.a)  //1110
+//         }, 0);
+//     }
+// }
+// obj.f()
+
+
+
+</script>

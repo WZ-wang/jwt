@@ -1,0 +1,27 @@
+<!-- <script>
+
+function Person(name){
+    this.name = name
+    
+}
+Person.prototype.say = function(){
+    console.log("say...")
+}
+
+function New(){
+    let obj ={}
+    let Con = arguments[0]
+    let data = [].slice.call(arguments,1)
+    let res = Con.apply(obj,data)
+    obj.__proto__ = Con.prototype
+    return res instanceof Object ? res : obj
+}
+
+// let p = new Person("wangcai")
+let p = New(Person,"wangcai")
+
+p.say()
+console.log(p.name)
+
+</script> -->
+

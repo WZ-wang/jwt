@@ -1,0 +1,45 @@
+<script>
+//抽象类
+// function Person(){
+//     if(new.target === Person){
+//         throw new Error("ssssss")
+//     }
+// }
+// let x1q = new Person()
+
+
+//?????
+// function Person(name){
+//     this.name = name
+//     function jump(){
+//         console.log("jump...")
+//     }
+//     this.jump = jump
+// }
+// let p = new Person("wangcai")
+// p.jump()
+
+
+
+
+
+//继承
+// function Person(name){
+//     this.name = name
+// }
+// Person.prototype.say = function(){
+//     console.log("say...")
+// }
+// function Xq (name){
+//     Person.call(this,name)
+// }
+// // Xq.prototype.__proto__ = Person.prototype  方法1
+// // Xq.prototype = Object.create(Person.prototype) 方法2
+// Object.setPrototypeOf(Xq.prototype,Person.prototype)  //方法3
+// let xq = new Xq("wangcai")
+// xq.say()
+// console.log(xq.name)
+
+//共有属性方法直接去原型上去找,使两个函数的construcor指向一致，私有的属性通过call方法借用
+
+</script>

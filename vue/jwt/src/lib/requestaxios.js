@@ -18,7 +18,6 @@ class AxiosRequest {
     setInterceptor(instance,url){
         instance.interceptors.request.use(config=>{
             config.headers.Authorization = getLocal("token")
-
             if(!this.requestTimes){
                 store.commit("loading")
             }

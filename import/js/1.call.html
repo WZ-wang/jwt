@@ -1,0 +1,55 @@
+<script>
+
+// function f(){
+//     console.log(this)  //{name: "wangcai"}
+//     console.log("f...")
+// }
+// let obj = {name:"wangcai"}
+// f.call(obj)
+
+// call 1.改变this的指向 2.函数会立即执行  
+
+// call原理
+
+// Function.prototype.call = function(context){
+//     context.fn = this  //this指向f
+//     let args = []
+//     for(let i=1;i<arguments.length; i++){
+//         args.push(arguments[i])
+//     }
+//     let res = context.fn(...args)
+//     delete context.fn
+//     return res
+// }
+
+// function f(a,b){
+//     console.log(this)
+//     console.log(a,b)
+//     return a+b
+// }
+
+// let obj = {name:"wangcai"}
+// console.log(f.call(obj,1,2))
+
+// Function.prototype.call = function(context){
+//     context = context ? Object(context) : window
+//     context.fn = this  //this指向f
+//     let args = []
+//     for(let i=1;i<arguments.length; i++){
+//         args.push(arguments[i])
+//     }
+//     let res = context.fn(...args)
+//     delete context.fn
+//     return res
+// }
+
+// function f(a,b){
+//     console.log(this)
+//     console.log(a,b)
+//     return a+b
+// }
+
+// let obj = {name:"wangcai"}
+// console.log(f.call(obj,1,2))
+
+</script>

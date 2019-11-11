@@ -5,7 +5,8 @@ import {State} from "../store/type/state"
 interface props{
     number:number,
     add:any,
-    sub:any
+    sub:any,
+    go:any
 }
 class Counter extends React.Component<props> {
     render() {
@@ -15,9 +16,13 @@ class Counter extends React.Component<props> {
                 <button onClick={this.props.add}>+</button>
                 <br/>
                 <button onClick={this.props.sub}>-</button>
+                <br/>
+                <button onClick= {()=>this.props.go("/")}>返回首页</button>
             </div>
         );
     }
 }
-
-export default connect((state:State)=>state,actions)(Counter);
+let mapState = function (state:any):State{
+    return state.counter
+}
+export default connect(mapState,actions)(Counter);

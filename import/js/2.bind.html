@@ -1,0 +1,24 @@
+<script>
+
+//bind 原理
+Function.prototype.bind = function(context){
+    let that = this  //f
+    let arr = Array.prototype.slice.call(arguments,1)
+    return function(){
+        let arr1 = Array.prototype.slice.call(arguments)
+        return that.apply(context,arr.concat(arr1))
+    }
+}
+
+function f(a,b){
+    console.log(this)  //{name: "wangcai"}
+    console.log("sss")  //sss
+    console.log(a,b)  //55 99
+}
+
+let obj = {name:"wangcai"}
+
+let newF = f.bind(obj,55)
+newF(99)
+
+</script>
